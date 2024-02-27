@@ -25,7 +25,7 @@ public class Carta {
         this.atributos.put(nombreAtrib,valor);
     }
 
-    public Map<String, Double> getAtributos() {
+    public HashMap<String, Double> getAtributos() {
         return new HashMap<>(atributos);
     }
 
@@ -37,6 +37,11 @@ public class Carta {
         return atributos.get(nombreAtributo);
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Carta{" +
+                "nombre='" + nombre + '\'' +
+                ", atributos=" + atributos +
+                '}';
+    }
 }
