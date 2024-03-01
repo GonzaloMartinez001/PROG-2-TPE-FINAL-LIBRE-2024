@@ -42,4 +42,12 @@ public class PocimaCocktail extends Pocima{
 
         return cartaCopia;
     }
+
+    @Override
+    public String toString() {
+        return "PocimaCocktail{" +
+                "pocimas=" + pocimas +
+                super.toString() +
+                '}';
+    }
 }

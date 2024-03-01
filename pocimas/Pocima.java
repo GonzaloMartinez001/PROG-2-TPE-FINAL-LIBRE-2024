@@ -30,4 +30,11 @@ public abstract class Pocima {
 
     public abstract Carta efectoPocima(Carta carta);
 
+    @Override
+    public String toString() {
+        return
+                "nombre='" + nombre + '\'' +
+                ", nombreCarta='" + nombreCarta + '\''
+                ;
+    }
 }
