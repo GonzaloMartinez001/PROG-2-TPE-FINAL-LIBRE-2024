@@ -101,36 +101,22 @@ public class Juego {
         jugador2.setMazoJugador(mazoJugador2);
     }
 
-    private boolean pocimaAsociada(Carta carta){
-        for (Pocima pocima : mazoPocima){
-            if (carta.getNombre().equals(pocima.getNombreCarta())){
-                System.out.println("Hola Gonza");
-                return true;
-            }
-        }
-        System.out.println("HOLA BEBE");
-        return false;
-    }
+    private boolean pocimaAsociada(Pocima pocima){
+        return (!pocima.getNombreCarta().equals(" ")); //TRUE = pocima tiene carta
+    }                                                  //FALSE = pocima no esta asociada a nada
 
     private void repartirPocimas(Carta carta){
         Collections.shuffle(mazoPocima);
         for (Pocima pocima : mazoPocima){
-            if (pocimaAsociada(carta)){
-                break;
-            }
-            else {
-                if (!pocima.getNombreCarta().equals(" ")) {
-                    break;
-                }
+            if (!pocimaAsociada(pocima)) {
                 if (pocima instanceof PocimaCocktail) {
                     pocima.setNombreCarta(carta.getNombre());
                     ((PocimaCocktail) pocima).setNombrePocima(carta.getNombre());
-                    System.out.println("Hola Cora, es una pocima Cocktail " + pocima.getNombre() + " " + carta.getNombre());
                 }
                 else {
                     pocima.setNombreCarta(carta.getNombre());
-                    System.out.println("Hola Bambi, es una pocima normal " + pocima.getNombre() + " " + carta.getNombre());
                 }
+                break;
             }
         }
     }
@@ -176,7 +162,6 @@ public class Juego {
 
     public void rondas(int maxRondas, int numRonda) {
         String jugadorMano = "jugador1";
-        System.out.println(jugadorMano);
         String nombreJugadorMano = "";
         String atributoActual = "";
         String situacionRonda = "";
@@ -186,9 +171,6 @@ public class Juego {
             Carta cartaJug2 = jugador2.getMazoJugador().get(0);
             Pocima pocimaJug1 = getPocimaAsociada(cartaJug1);
             Pocima pocimaJug2 = getPocimaAsociada(cartaJug2);
-
-            System.out.println("POC JUG 111" + pocimaJug1);
-            System.out.println("POC JUG 222" + pocimaJug2);
 
             if (jugadorMano.equals("jugador1")) {
                 nombreJugadorMano = jugador1.getNombreJugador();
@@ -216,7 +198,6 @@ public class Juego {
                 moverCartas(situacionRonda);
                 System.out.println(jugador1.getNombreJugador() + " posee ahora " + jugador1.getMazoJugador().size() + " cartas y " + jugador2.getNombreJugador() + " posee ahora " + jugador2.getMazoJugador().size() + " cartas");
                 jugadorMano = "jugador1";
-                System.out.println(jugadorMano);
             } else {
                 if (getValorAtribActual(jugador2, atributoActual) > getValorAtribActual(jugador1, atributoActual)) {
                     System.out.println("Gana la ronda " + jugador2.getNombreJugador() + ".");
@@ -224,7 +205,6 @@ public class Juego {
                     moverCartas(situacionRonda);
                     System.out.println(jugador1.getNombreJugador() + " posee ahora " + jugador1.getMazoJugador().size() + " cartas y " + jugador2.getNombreJugador() + " posee ahora " + jugador2.getMazoJugador().size() + " cartas");
                     jugadorMano = "jugador2";
-                    System.out.println(jugadorMano);
                 } else {
                     System.out.println("Los valores son iguales, se empata la ronda.");
                     situacionRonda = "empate";

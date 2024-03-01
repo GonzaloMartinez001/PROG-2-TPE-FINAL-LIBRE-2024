@@ -20,19 +20,25 @@ public class Main {
         jugador1.cambiarEstrategia(new EstrategiaTimbero());
 
         Pocima pocima1 = new PocimaFortalecedora("Pocima Fortalecedora"," ",1.2);
-        Pocima pocima2 = new PocimaSelectivaFuerza("Pocima Selectiva Fuerza"," ",1.35);
+        Pocima pocima2 = new PocimaFortalecedoraPlus("Pocima Fortalecedora Plus"," ",1.5);
         Pocima pocima3 = new PocimaKriptonita("Pocima Kriptonita"," ",0.75);
-        Pocima pocima4 = new PocimaQuieroValeCuatro("Pocima Quiero Vale Cuatro"," ",4);
-        PocimaCocktail pocima5 = new PocimaCocktail("Pocima Cocktail"," ");
-        Pocima pocima6 = new PocimaSelectivaFuerza("Pocima Selectiva Fuerza"," ",1.35);
-        Pocima pocima7 = new PocimaSelectivaPeso("Pocima Selectiva Peso"," ",1.43);
-        Pocima pocima8 = new PocimaFortalecedora("Pocima Fortalecedora"," ",1.2);
-        Pocima pocima9 = new PocimaFortalecedora("Pocima Fortalecedora", " ", 2.6);
-        Pocima pocima10 = new PocimaSelectivaPeso("Pocima Selectiva Peso", " ", 2.56);
-        Pocima pocima11 = new PocimaKriptonita("Pocima Kriptonita"," ",0.56);
-        Pocima pocima12 = new PocimaNumeroMagico("Pocima Numero Magico"," ",23);
-        Pocima pocima13 = new PocimaFortalecedoraPlus("Pocima Fortalecedora Plus"," ",1.8);
-        Pocima pocima14 = new PocimaReductorDePlomo("Pocima Reductor Plomo"," ",0.45);
+        Pocima pocima4 = new PocimaReductorDePlomo("Pocima Reductor Plomo"," ",0.45);
+        Pocima pocima5 = new PocimaQuieroValeCuatro("Pocima Quiero Vale Cuatro"," ",4);
+        Pocima pocima6 = new PocimaNumeroMagico("Pocima Numero Magico"," ",23);
+        Pocima pocima7 = new PocimaSelectivaFuerza("Pocima Selectiva Fuerza"," ",1.35);
+        Pocima pocima8 = new PocimaSelectivaPeso("Pocima Selectiva Peso"," ",1.43);
+        PocimaCocktail pocima9 = new PocimaCocktail("Pocima Cocktail"," ");
+        Pocima pocima10 = new PocimaFortalecedora("Pocima Fortalecedora"," ",1.7);
+        Pocima pocima11 = new PocimaFortalecedoraPlus("Pocima Fortalecedora Plus", " ", 2.6);
+        Pocima pocima12 = new PocimaKriptonita("Pocima Kriptonita"," ",0.87);
+        Pocima pocima13 = new PocimaReductorDePlomo("Pocima Reductor Plomo"," ",0.65);
+        Pocima pocima14 = new PocimaQuieroValeCuatro("Pocima Quiero Vale Cuatro"," ",8);
+        Pocima pocima15 = new PocimaNumeroMagico("Pocima Numero Magico"," ",99);
+        Pocima pocima16 = new PocimaSelectivaFuerza("Pocima Selectiva Fuerza"," ",1.79);
+        Pocima pocima17 = new PocimaSelectivaPeso("Pocima Selectiva Peso", " ", 2.15);
+        PocimaCocktail pocima18 = new PocimaCocktail("Pocima Cocktail"," ");
+        Pocima pocima19 = new PocimaSelectivaFuerza("Pocima Selectiva Fuerza"," ",2.35);
+        Pocima pocima20 = new PocimaSelectivaPeso("Pocima Selectiva Peso"," ",2.43);
 
         Carta carta1 = new Carta("Superman");
         carta1.addAtributos("Altura",2.05);
@@ -91,16 +97,23 @@ public class Main {
         juego.addPocima(pocima2);
         juego.addPocima(pocima3);
         juego.addPocima(pocima4);
-        pocima5.addPocima(pocima6);
-        pocima5.addPocima(pocima7);
-        pocima5.addPocima(pocima8);
         juego.addPocima(pocima5);
+        pocima9.addPocima(pocima6);
+        pocima9.addPocima(pocima7);
+        pocima9.addPocima(pocima8);
         juego.addPocima(pocima9);
         juego.addPocima(pocima10);
         juego.addPocima(pocima11);
         juego.addPocima(pocima12);
         juego.addPocima(pocima13);
         juego.addPocima(pocima14);
+        juego.addPocima(pocima15);
+        pocima18.addPocima(pocima16);
+        pocima18.addPocima(pocima17);
+        juego.addPocima(pocima18);
+        juego.addPocima(pocima19);
+        juego.addPocima(pocima20);
+
 
         juego.comenzarJuego(10);
 
