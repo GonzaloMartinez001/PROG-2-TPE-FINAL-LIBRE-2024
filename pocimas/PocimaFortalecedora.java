@@ -35,4 +35,12 @@ public class PocimaFortalecedora extends Pocima {
         cartaCopia.setAtributos(atributos);
         return cartaCopia;
     }
+
+    @Override
+    public String toString() {
+        return "PocimaFortalecedora{" +
+                "valorPocima=" + valorPocima +
+                super.toString() +
+                '}';
+    }
 }

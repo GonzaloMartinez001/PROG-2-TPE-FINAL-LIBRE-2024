@@ -34,4 +34,12 @@ public class PocimaSelectivaPeso extends Pocima{
         cartaCopia.setAtributos(atributos);
         return cartaCopia;
     }
+
+    @Override
+    public String toString() {
+        return "PocimaSelectivaPeso{" +
+                "valorPocima=" + valorPocima +
+                super.toString() +
+                '}';
+    }
 }

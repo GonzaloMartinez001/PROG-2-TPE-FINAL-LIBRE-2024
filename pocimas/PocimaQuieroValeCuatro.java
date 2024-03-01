@@ -32,4 +32,12 @@ public class PocimaQuieroValeCuatro extends Pocima{
         cartaCopia.setAtributos(atributos);
         return cartaCopia;
     }
+
+    @Override
+    public String toString() {
+        return "PocimaQuieroValeCuatro{" +
+                "valorPocima=" + valorPocima +
+                super.toString() +
+                '}';
+    }
 }

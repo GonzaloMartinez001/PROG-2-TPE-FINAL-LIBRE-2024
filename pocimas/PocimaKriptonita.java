@@ -34,4 +34,12 @@ public class PocimaKriptonita extends Pocima {
         cartaCopia.setAtributos(atributos);
         return cartaCopia;
     }
+
+    @Override
+    public String toString() {
+        return "PocimaKriptonita{" +
+                "valorPocima=" + valorPocima +
+                super.toString() +
+                '}';
+    }
 }

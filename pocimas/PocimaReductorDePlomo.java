@@ -34,4 +34,12 @@ public class PocimaReductorDePlomo extends Pocima{
         cartaCopia.setAtributos(atributos);
         return cartaCopia;
     }
+
+    @Override
+    public String toString() {
+        return "PocimaReductorDePlomo{" +
+                "valorPocima=" + valorPocima +
+                super.toString() +
+                '}';
+    }
 }

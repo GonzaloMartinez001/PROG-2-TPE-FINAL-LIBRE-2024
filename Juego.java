@@ -69,15 +69,14 @@ public class Juego {
                 if (!mazoPocima.isEmpty()){
                     repartirPocimas(carta);
                 }
-                System.out.println(mazoPocima);
             }
+
             for (int i=((mazo.cantCartas())/2); i<(mazo.cantCartas()); i++) {
                 Carta carta = mazo.getCartas().get(i);
                 mazoJugador2.add(carta);
                 if (!mazoPocima.isEmpty()) {
                     repartirPocimas(carta);
                 }
-                System.out.println(mazoPocima);
             }
         }
 
@@ -88,15 +87,14 @@ public class Juego {
                 if (!mazoPocima.isEmpty()) {
                     repartirPocimas(carta);
                 }
-                System.out.println(mazoPocima);
             }
+
             for (int i=((mazo.cantCartas())/2)+1; i<(mazo.cantCartas()); i++) {
                 Carta carta = mazo.getCartas().get(i);
                 mazoJugador2.add(carta);
                 if (!mazoPocima.isEmpty()) {
                     repartirPocimas(carta);
                 }
-                System.out.println(mazoPocima);
             }
         }
         jugador1.setMazoJugador(mazoJugador1);
@@ -106,9 +104,11 @@ public class Juego {
     private boolean pocimaAsociada(Carta carta){
         for (Pocima pocima : mazoPocima){
             if (carta.getNombre().equals(pocima.getNombreCarta())){
+                System.out.println("Hola Gonza");
                 return true;
             }
         }
+        System.out.println("HOLA BEBE");
         return false;
     }
 
@@ -116,15 +116,21 @@ public class Juego {
         Collections.shuffle(mazoPocima);
         for (Pocima pocima : mazoPocima){
             if (pocimaAsociada(carta)){
-                return;
+                break;
             }
-            else{
-                if (pocima instanceof PocimaCocktail){
+            else {
+                if (!pocima.getNombreCarta().equals(" ")) {
+                    break;
+                }
+                if (pocima instanceof PocimaCocktail) {
                     pocima.setNombreCarta(carta.getNombre());
                     ((PocimaCocktail) pocima).setNombrePocima(carta.getNombre());
+                    System.out.println("Hola Cora, es una pocima Cocktail " + pocima.getNombre() + " " + carta.getNombre());
                 }
-                else
+                else {
                     pocima.setNombreCarta(carta.getNombre());
+                    System.out.println("Hola Bambi, es una pocima normal " + pocima.getNombre() + " " + carta.getNombre());
+                }
             }
         }
     }
