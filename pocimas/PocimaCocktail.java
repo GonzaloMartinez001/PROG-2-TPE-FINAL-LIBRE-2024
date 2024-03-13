@@ -46,7 +46,7 @@ public class PocimaCocktail extends Pocima{
     @Override
     public String toString() {
         return "PocimaCocktail{" +
-                "pocimas=" + pocimas +
+                "pocimas= " + pocimas +
                 super.toString() +
                 '}';
     }

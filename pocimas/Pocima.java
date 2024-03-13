@@ -34,7 +34,7 @@ public abstract class Pocima {
     public String toString() {
         return
                 "nombre='" + nombre + '\'' +
-                ", nombreCarta='" + nombreCarta + '\''
+                ",nombreCarta='" + nombreCarta + '\''
                 ;
     }
 }
